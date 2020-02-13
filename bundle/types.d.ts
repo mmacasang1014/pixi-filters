@@ -1,6 +1,7 @@
 /// <reference types="@pixi/filter-adjustment" />
 /// <reference types="@pixi/filter-advanced-bloom" />
 /// <reference types="@pixi/filter-ascii" />
+/// <reference types="@pixi/filter-aurora" />
 /// <reference types="@pixi/filter-bevel" />
 /// <reference types="@pixi/filter-bloom" />
 /// <reference types="@pixi/filter-bulge-pinch" />
@@ -35,6 +36,7 @@ declare module "pixi-filters" {
     export * from "@pixi/filter-adjustment";
     export * from "@pixi/filter-advanced-bloom";
     export * from "@pixi/filter-ascii";
+    export * from "@pixi/filter-aurora";
     export * from "@pixi/filter-bevel";
     export * from "@pixi/filter-bloom";
     export * from "@pixi/filter-bulge-pinch";

@@ -29,6 +29,7 @@
     "@pixi/filter-adjustment": "^3.0.3",
     "@pixi/filter-advanced-bloom": "^3.0.3",
     "@pixi/filter-ascii": "^3.0.3",
+    "@pixi/filter-aurora": "^3.0.3",
     "@pixi/filter-bevel": "^3.0.3",
     "@pixi/filter-bloom": "^3.0.3",
     "@pixi/filter-bulge-pinch": "^3.0.3",

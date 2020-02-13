@@ -18,6 +18,7 @@
  */
 export * from "@pixi/filter-adjustment";
 export * from "@pixi/filter-advanced-bloom";
+export * from "@pixi/filter-aurora";
 export * from "@pixi/filter-ascii";
 export * from "@pixi/filter-bevel";
 export * from "@pixi/filter-bloom";
