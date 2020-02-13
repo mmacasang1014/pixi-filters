@@ -9,7 +9,7 @@ import {Point, DEG_TO_RAD} from '@pixi/math';
  *
  *
  *
- * 
+ *
  * @class
  * @extends PIXI.Filter
  * @memberof PIXI.filters
