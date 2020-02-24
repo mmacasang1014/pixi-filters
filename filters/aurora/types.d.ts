@@ -1,5 +1,5 @@
 /// <reference types="pixi.js" />
-declare module "@pixi/filter-aurora" {
+declare module "pixi-filter-aurora" {//"pixi-filter-aurora"
     export class AuroraFilter extends PIXI.Filter {
         constructor(options?:AuroraFilterOptions);
         angle:number;

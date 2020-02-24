@@ -85,9 +85,10 @@ float turb(vec3 P, vec3 rep, float lacunarity, float gain)
     float sum = 0.0;
     float sc = 1.0;
     float totalgain = 1.0;
-    for (float i = 0.0; i < 6.0; i++)
+    float n = pnoise(P * sc, rep);
+    for (float i = 0.0; i < 4.0; i++)
     {
-        sum += totalgain * pnoise(P * sc, rep);
+        sum += totalgain * n;//pnoise(P * sc, rep);
         sc *= lacunarity;
         totalgain *= gain;
     }

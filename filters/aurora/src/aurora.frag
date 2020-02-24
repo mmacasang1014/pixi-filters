@@ -16,33 +16,37 @@ ${perlin}
 void main(void) {
     vec2 coord = vTextureCoord * filterArea.xy / dimensions.xy;
 
-    float d;
     float _cos = light.x;
     float _sin = light.y;
+    vec3 dir = vec3(0.0, 0.0, 0.0);
+    float d = 0.0;
+    
 
-    if (parallel) {
-        //float _cos = light.x;
-        //float _sin = light.y;
+    if (parallel) 
+    {
         d = (_cos * coord.x) + (_sin * coord.y * aspect);
-    } else {
-        float dx = coord.x - light.x / dimensions.x;
-        float dy = (coord.y - light.y / dimensions.y) * aspect;
-        float dis = sqrt(dx * dx + dy * dy) + 0.00001;
-        d = dy / dis;
+        dir = vec3(d, d, 0.0);
+    } 
+    else 
+    {
+         float dx = coord.x - light.x / dimensions.x;
+         float dy = (coord.y - light.y / dimensions.y) * aspect;
+
+         dir = vec3(dx, dy, 0.0);
     }
 
-    vec3 dir = vec3(d, d, 0.0);
-
-    float newtime = time * 0.5;
-    float noise = turb(dir + vec3(newtime, 0.0, 62.1 + newtime) * 0.05, vec3(480.0, 320.0, 480.0), lacunarity, gain);
+    float noise = turb(dir + vec3(time, 0.0, 62.1 + time) * 0.05, vec3(400.0, 270.0, 270.0), lacunarity, gain);
     noise = mix(noise, 0.0, 0.3);
 
-    vec4 colorrandom = vec4((_cos - coord.x) + abs(cos(time * 0.3)), (_sin + coord.y) + abs(sin(time * 0.3)), d * noise, 0.50);
+    float colorChangeSpeed = time * 0.3;
+    float r = (_cos - coord.x) + abs(cos(colorChangeSpeed));
+    float g = (_sin + coord.y) + abs(sin(colorChangeSpeed));
+    float b = d * noise;
 
     //fade vertically.
-    vec4 mist = vec4(noise, noise, noise, 0.50) * colorrandom * (0.50 - coord.y);
+    vec4 mist = vec4(noise, noise, noise, 0.30) * vec4(r,g,b, 0.30) * (0.40 - coord.y + (noise * 0.1));
 
-    mist.a = 1.0;//(1.0 - coord.y);
+    mist.a = 1.0;
 
     gl_FragColor = mist;//texture2D(uSampler, vTextureCoord) + mist;
 }

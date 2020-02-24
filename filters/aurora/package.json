@@ -1,10 +1,9 @@
 {
-  "name": "@pixi/filter-aurora",
-  "version": "3.0.3",
+  "name": "pixi-filter-aurora",
+  "version": "1.0.2",
   "main": "lib/filter-aurora.cjs.js",
   "bundle": "dist/filter-aurora.js",
   "description": "Based on Godray filter by Alain Galvan. PixiJS filter to apply and animate atmospheric aurora light rays",
-  "author": "Mark Macasang",
   "module": "lib/filter-aurora.esm.js",
   "types": "types.d.ts",
   "license": "MIT",
