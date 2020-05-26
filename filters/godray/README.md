@@ -1,11 +1,11 @@
-# GodrayFilter
+# Lightray Filter
 
 PixiJS filter to apply and animate atmospheric light rays.
 
 ## Installation
 
 ```bash
-npm install @pixi/filter-godray
+npm i pixi-filter-lightray
 ```
 
 ## Usage

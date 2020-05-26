@@ -1,0 +1,26 @@
+{
+  "name": "pixi-filter-lightray",
+  "version": "3.0.5",
+  "main": "lib/filter-lightray.cjs.js",
+  "bundle": "dist/filter-lightray.js",
+  "description": "Based on Godray filter by Alain Galvan. PixiJS filter to apply and animate light rays",
+  "module": "lib/filter-lightray.esm.js",
+  "types": "types.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmacasang1014/pixi-filters-swt-custom.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib",
+    "dist",
+    "types.d.ts"
+  ],
+  "peerDependencies": {
+    "@pixi/core": "^5.0.0",
+    "@pixi/math": "^5.0.0"
+  }
+}
